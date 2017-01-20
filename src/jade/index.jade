@@ -10,7 +10,7 @@ block main
     h1.hero__title
       | DPA-It.
     p.hero__subtitle(style='white-space:pre;')
-      | Allways compliant
+      | Always compliant
       | Never any fuss
   
   //- main section
@@ -32,3 +32,7 @@ block main
             input(type='text',id='lastname',class='input-xlarge',data-bind='text:lastname')
 
         div.contol-group(id='dpa-container')
+
+        div.control-group
+          div.controls
+            input(type='button',id='submit',class='btn-primary',value='Submit')
