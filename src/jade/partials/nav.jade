@@ -1,15 +1,21 @@
-//- ##### the navigation links mixin #####
+mixin navLink(link, cls, name)
+	li.__cls
+		a(
+			href=link
+		) !{name}
 
-mixin navLink(link, active, name)
-  li.nav__item
-    a.nav__link(
-      href=link 
-      class={active: current === '#{active}'}
-    ) !{name}
+nav#mainNav.navbar.navbar-default.navbar-fixed-top.navbar-custom
+	.container
+		.navbar-header.page-scroll
+			button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+				span.sr-only Toggle navigation
+				|  Menu 
+				i.fa.fa-bars
+			a.navbar-brand(href='#page-top') Start Bootstrap
 
-//- ######################################
-
-ul.nav
-  +navLink('/', 'index', 'Home')
-  +navLink('about.html', 'about', 'About')
-  +navLink('https://github.com/simonswiss/Multi-page-Jade-Webpack', '', 'GitHub &rarr;')
+		#bs-example-navbar-collapse-1.collapse.navbar-collapse
+			ul.nav.navbar-nav.navbar-right
+				+navLink('#page-top', 'hidden', '')
+				+navLink('#portfolio', 'page-scroll', 'Portfolio')
+				+navLink('#about', 'page-scroll', 'About')
+				+navLink('#contact', 'page-scroll', 'Contact')
