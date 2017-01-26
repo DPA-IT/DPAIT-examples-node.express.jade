@@ -16,15 +16,15 @@ $(document).ready(function () {
 		form_check_label	: "control-label"
 	});
 
-	var submission = {
-		customerId	: "ABC123",
-		firstName 	: "Simon", 
-		lastName 	: "Parsons", 
-		email 		: "simon.parsons@sipsoftware.co.uk", 
-		mobNumber  	: "+44(0)7721532678"
-	};
-
 	$('#submit').click(function(){
+
+		var submission = {
+			customerId	: "<Insert_Customer_Id_Here>",
+			firstName 	: document.getElementById('first-name').value, 
+			lastName 	: document.getElementById('last-name').value, 
+			email 		: document.getElementById('email').value, 
+			mobNumber  	: document.getElementById('mob-tel').value
+		};
 
 		dpaIt.save(submission, 
 			function(submission_id) {
