@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "dpa-it": "^1.2.8",
+    "dpa-it": "^1.2.9",
     "font-awesome": "^4.7.0",
     "sass-loader": "^4.1.1"
   }
