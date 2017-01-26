@@ -9,26 +9,86 @@ block main
     .container
       .row
         .col-lg-12.text-center
-          h2 Portfolio
+          h2 Example Customer Form
           hr.star-primary
 
       .row
-          .col-lg-12.text-center
+          .col-lg-8.col-md-offset-2.text-center
 
-            form(class='form-horizontal',action='/login',method='POST',id='loginForm')
-              fieldset
-                div.control-group
-                  label(for='firstname',class='control-label') Username
-                  div.controls
-                    input(type='text',id='firstname',class='input-xlarge',data-bind='text:firstname')
+            p.text-justify.lead
+              | Below is a typical registration form that you might use to collect
+              | contact information from your customers. This example shows how by 
+              | simply including the #{productName} control you can add compliant 
+              | marketing questions to your form. 
 
-                div.control-group
-                  label(for='lastname',class='control-label') Lastname
-                  div.controls
-                    input(type='text',id='lastname',class='input-xlarge',data-bind='text:lastname')
+            p.text-justify.small
+              | By listening for the click event of the submit button, you can then
+              | use the same control to safely submit and save the customers choices.
+              | By default the questions are rendered using bootstrap compatible styles
+              | however you can customise all aspects of the controls appearance
+              | to suite your own style, but remember, you are not allowed to change
+              | the text of the questions that are asked, because to do so would mean
+              | we could no longer guarantee your compliance.
 
-                div.contol-group(id='dpa-container')
+            form.form-horizontal(action='/login',method='POST')#example-form
 
-                div.control-group
-                  div.controls
-                    input(type='button',id='submit',class='btn-primary',value='Submit')
+              hr
+
+              .form-group.form-group-lg
+                
+                label.col-sm-2.control-label(for='first-name') First Name
+                .col-sm-10
+                    input.form-control.input-lg(type='text')#first-name
+
+              .form-group.form-group-lg
+
+                label.col-sm-2.control-label(for='last-name') Last Name
+                .col-sm-10
+                    input.form-control.input-lg(type='text')#last-name
+
+              .form-group.form-group-lg
+
+                label.col-sm-2.control-label(for='email-address') Email
+                .col-sm-10
+                    input.form-control.input-lg(type='text')#email-address
+
+              hr
+
+              .form-group.form-group-lg
+              
+                label.col-sm-2.control-label(for='house-number') House No.
+                .col-sm-5
+                    input.form-control.input-lg(type='text')#house-number
+
+              .form-group.form-group-lg
+
+                label.col-sm-2.control-label(for='street-name') Street
+                .col-sm-10
+                    input.form-control.input-lg(type='text')#street-name
+
+              .form-group.form-group-lg
+
+                label.col-sm-2.control-label(for='town-name') Town
+                .col-sm-10
+                    input.form-control.input-lg(type='text')#town-name
+
+              .form-group.form-group-lg
+
+                label.col-sm-2.control-label(for='county-name') County
+                .col-sm-10
+                    input.form-control.input-lg(type='text')#county-name
+
+              .form-group.form-group-lg
+
+                label.col-sm-2.control-label(for='post-code') Post Code
+                .col-sm-5
+                    input.form-control.input-lg(type='text')#post-code
+
+              hr
+
+              .col-md-offset-2.text-left#dpa-container
+
+              br
+
+              .form-group.form-group-lg
+                  input.btn.btn-lg.btn-primary(type='button',value='Submit')#submit

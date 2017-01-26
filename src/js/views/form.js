@@ -12,7 +12,8 @@ $(document).ready(function () {
 	var dpaIt = new dpa('GHYT-32423432-KJHKJHK-123123123-JHG');
 
 	dpaIt.init('#dpa-container', {
-		input_css	: "myCustomClass"
+		form_group			: "form-group form-group-lg", 
+		form_check_label	: "control-label"
 	});
 
 	var submission = {
