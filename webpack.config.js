@@ -35,7 +35,7 @@ var SMELLY_PATH = path.resolve(__dirname, "./src/styles");
 module.exports = {
   entry: {
     index: PATHS.entries + 'index.js', 
-    index: PATHS.entries + 'form.js'
+    form: PATHS.entries + 'form.js'
   },
   output: {
     path: PATHS.output,
