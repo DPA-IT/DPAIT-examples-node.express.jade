@@ -28,10 +28,13 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.0",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "node-sass": "^4.3.0"
   },
   "dependencies": {
-    "dpa-it": "^1.2.7",
-    "font-awesome": "^4.7.0"
+    "bootstrap": "^3.3.7",
+    "dpa-it": "^1.2.8",
+    "font-awesome": "^4.7.0",
+    "sass-loader": "^4.1.1"
   }
 }
